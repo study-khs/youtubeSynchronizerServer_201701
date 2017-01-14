@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/message/{path_message}")
+@RequestMapping("/message/{pathMessage}")
 public class MessageRestController {
 	//private final String message;
 
