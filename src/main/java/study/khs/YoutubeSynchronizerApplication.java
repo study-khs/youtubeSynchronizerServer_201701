@@ -12,5 +12,6 @@ public class YoutubeSynchronizerApplication {
 	
 	public void printTruth() {
 		System.out.println("jungsung is real pool");
+		System.out.println("jungsung isasdasdsa real pool");
 	}
 }
