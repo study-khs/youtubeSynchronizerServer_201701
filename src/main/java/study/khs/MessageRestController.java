@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/message/{pathMessage}")
+@RequestMapping("/message")
 public class MessageRestController {
 	//private final String message;
 
@@ -23,7 +23,8 @@ public class MessageRestController {
 		return "You said "+ message + ".";
 	}
 	
-	@RequestMapping(method = RequestMethod.GET)
+//	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(value="/{pathMessage}", method = RequestMethod.GET)
 	String get_replyMessages(@PathVariable String pathMessage) {
 		String replyMessage = makeReply(pathMessage);
 		System.out.println("GET : "+pathMessage + " Result : " + replyMessage);
