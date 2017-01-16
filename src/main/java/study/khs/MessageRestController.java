@@ -32,9 +32,9 @@ public class MessageRestController {
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-	String post_replyMessages(@RequestBody String requestMessage) {
-		String replyMessage = makeReply(requestMessage);
-		System.out.println("POST : "+requestMessage + " Result : " + replyMessage);
+	String post_replyMessages(@RequestBody Message requestMessage) {
+		String replyMessage = makeReply(requestMessage.message);
+		System.out.println("POST : " + requestMessage + " Result : " + replyMessage);
 		return replyMessage;
 	}
 }
