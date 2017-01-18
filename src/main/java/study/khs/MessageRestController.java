@@ -20,7 +20,7 @@ public class MessageRestController {
 //	}
 
 	private String makeReply(String message) {
-		return "You said "+ message + "!!!";
+		return "You said "+ message + "!!!!";
 	}
 	
 //	@RequestMapping(method = RequestMethod.GET)
