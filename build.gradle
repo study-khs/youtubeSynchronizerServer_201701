@@ -16,8 +16,8 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'war'
 
 war {
-	baseName = 'demo'
-	version = '0.0.1-SNAPSHOT'
+	baseName = 'youtubeSynchronizer'
+	version = '0.0.1'
 }
 
 sourceCompatibility = 1.8
