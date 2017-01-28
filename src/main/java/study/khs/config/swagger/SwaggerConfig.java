@@ -17,41 +17,26 @@ public class SwaggerConfig {
 
 	@Bean
 	public Docket messageApi() {
-		return new Docket(DocumentationType.SWAGGER_2)
-				.groupName("message")
-				.select()
-				.apis(RequestHandlerSelectors.basePackage("study.khs.api"))
-				.paths(PathSelectors.ant("/api/message/**"))
-				.build()
-				.apiInfo(apiInfo());
+		return new Docket(DocumentationType.SWAGGER_2).groupName("message").select()
+				.apis(RequestHandlerSelectors.basePackage("study.khs.api")).paths(PathSelectors.ant("/api/message/**"))
+				.build().apiInfo(apiInfo());
 	}
 
 	@Bean
 	public Docket memberApi() {
-		return new Docket(DocumentationType.SWAGGER_2)
-				.groupName("member")
-				.select()
-				.apis(RequestHandlerSelectors.basePackage("study.khs.api"))
-				.paths(PathSelectors.ant("/api/member/**"))
-				.build()
-				.apiInfo(apiInfo());
+		return new Docket(DocumentationType.SWAGGER_2).groupName("member").select()
+				.apis(RequestHandlerSelectors.basePackage("study.khs.api")).paths(PathSelectors.ant("/api/member/**"))
+				.build().apiInfo(apiInfo());
 	}
 
 	@Bean
 	public Docket channelApi() {
-		return new Docket(DocumentationType.SWAGGER_2)
-				.groupName("channel")
-				.select()
-				.apis(RequestHandlerSelectors.basePackage("study.khs.api"))
-				.paths(PathSelectors.ant("/api/channel/**"))
-				.build()
-				.apiInfo(apiInfo());
+		return new Docket(DocumentationType.SWAGGER_2).groupName("channel").select()
+				.apis(RequestHandlerSelectors.basePackage("study.khs.api")).paths(PathSelectors.ant("/api/channel/**"))
+				.build().apiInfo(apiInfo());
 	}
 
 	private ApiInfo apiInfo() {
-		return new ApiInfoBuilder()
-				.title("API SPEC 확인 페이지")
-				.description("스터디를 위한 테스트 API SPEC 확인 페이지입니다")
-				.build();
+		return new ApiInfoBuilder().title("API SPEC 확인 페이지").description("스터디를 위한 테스트 API SPEC 확인 페이지입니다").build();
 	}
 }

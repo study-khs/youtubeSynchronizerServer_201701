@@ -38,7 +38,7 @@ public class MessageRestController {
 
 		String replyMessage = messageService.makeReply(message.getMessage());
 
-		log.info("replyMessage=[{}]", message);
+		log.info("replyMessage=[{}]", replyMessage);
 
 		return replyMessage;
 	}
