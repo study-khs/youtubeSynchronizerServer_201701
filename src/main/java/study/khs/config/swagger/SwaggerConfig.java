@@ -18,7 +18,7 @@ public class SwaggerConfig {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
 				.apis(RequestHandlerSelectors.basePackage("study.khs.api"))
-				.paths(PathSelectors.ant("/api/*"))
+				.paths(PathSelectors.ant("/api/**"))
 				.build();
 	}
 }

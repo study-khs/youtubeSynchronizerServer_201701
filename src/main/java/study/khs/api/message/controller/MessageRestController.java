@@ -17,10 +17,10 @@ import study.khs.api.message.service.MessageService;
 public class MessageRestController {
 
 	@Autowired
-	MessageService messageService;
+	private MessageService messageService;
 
-	@RequestMapping(value = "/{pathMessage}", method = RequestMethod.GET)
-	String get_replyMessages(@PathVariable String message) {
+	@RequestMapping(value = "/{message}", method = RequestMethod.GET)
+	public String getReplyMessage(@PathVariable String message) {
 
 		log.info("get_replyMessages message=[{}]", message);
 
@@ -32,7 +32,7 @@ public class MessageRestController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	String post_replyMessages(@RequestBody Message message) {
+	public String postReplyMessage(@RequestBody Message message) {
 
 		log.info("post_replyMessages message=[{}]", message);
 
