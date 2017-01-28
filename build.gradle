@@ -46,5 +46,5 @@ dependencies {
 	compile("org.springframework.boot:spring-boot-devtools")
 	providedCompile("javax.servlet:javax.servlet-api:3.0.1")
 	providedCompile("org.projectlombok:lombok:1.12.2")
-	compile("org.springframework:spring-webmvc:{versions.spring}")
+	compile("org.springframework:spring-webmvc")
 }
