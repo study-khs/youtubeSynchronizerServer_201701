@@ -7,36 +7,39 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.extern.slf4j.Slf4j;
 import study.khs.api.message.domain.Message;
+import study.khs.api.message.service.MessageService;
 
+@Slf4j
 @RestController
-@RequestMapping("/message")
+@RequestMapping("/api/message")
 public class MessageRestController {
-	//private final String message;
 
 	@Autowired
-	MessageRestController() {
-	}
-//	MessageRestController(String message) {
-//		this.message = message;
-//	}
+	MessageService messageService;
 
-	private String makeReply(String message) {
-		return "You said "+ message + "!!!!";
-	}
-	
-//	@RequestMapping(method = RequestMethod.GET)
-	@RequestMapping(value="/{pathMessage}", method = RequestMethod.GET)
-	String get_replyMessages(@PathVariable String pathMessage) {
-		String replyMessage = makeReply(pathMessage);
-		System.out.println("GET : "+pathMessage + " Result : " + replyMessage);
+	@RequestMapping(value = "/{pathMessage}", method = RequestMethod.GET)
+	String get_replyMessages(@PathVariable String message) {
+
+		log.info("get_replyMessages message=[{}]", message);
+
+		String replyMessage = messageService.makeReply(message);
+
+		log.info("replyMessage=[{}]", replyMessage);
+
 		return replyMessage;
 	}
-	
+
 	@RequestMapping(method = RequestMethod.POST)
-	String post_replyMessages(@RequestBody Message requestMessage) {
-		String replyMessage = makeReply(requestMessage.getMessage());
-		System.out.println("POST : " + requestMessage + " Result : " + replyMessage);
+	String post_replyMessages(@RequestBody Message message) {
+
+		log.info("post_replyMessages message=[{}]", message);
+
+		String replyMessage = messageService.makeReply(message.getMessage());
+
+		log.info("replyMessage=[{}]", message);
+
 		return replyMessage;
 	}
 }

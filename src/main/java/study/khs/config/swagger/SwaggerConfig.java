@@ -1,4 +1,4 @@
-package study.khs;
+package study.khs.config.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,8 +17,8 @@ public class SwaggerConfig {
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
-				.apis(RequestHandlerSelectors.any())
-				.paths(PathSelectors.any())
+				.apis(RequestHandlerSelectors.basePackage("study.khs.api"))
+				.paths(PathSelectors.ant("/api/*"))
 				.build();
 	}
 }
