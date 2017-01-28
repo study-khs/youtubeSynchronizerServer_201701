@@ -1,4 +1,4 @@
-package study.khs;
+package study.khs.api.image.domain;
 
 public class Image {
 	byte[] data;

@@ -1,4 +1,4 @@
-package study.khs;
+package study.khs.api.message.domain;
 
 public class Message {
 	String message;
