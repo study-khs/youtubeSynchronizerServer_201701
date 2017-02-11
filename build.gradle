@@ -33,6 +33,7 @@ repositories {
 
 configurations {
 	providedRuntime
+	compileJava.options.encoding = 'UTF-8'
 }
 
 dependencies {
