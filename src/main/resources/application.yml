@@ -6,6 +6,7 @@ spring:
     username: newuser
     password: admin
     driver-class-name: com.mysql.jdbc.Driver
+    connection-test-query: SELECT 1
   devtools:
     restart:
       exclude: static/**,public/**
@@ -28,3 +29,4 @@ spring:
     username: root
     password: 04412345
     driver-class-name: com.mysql.jdbc.Driver
+    connection-test-query: SELECT 1
