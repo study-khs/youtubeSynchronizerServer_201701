@@ -37,6 +37,6 @@ public class SwaggerConfig {
 	}
 
 	private ApiInfo apiInfo() {
-		return new ApiInfoBuilder().title("API SPEC 한글").description("한글 API SPEC 한글").build();
+		return new ApiInfoBuilder().title("API SPEC 확인 페이지").description("API SPEC을 확인하기 위한 페이지입니다").build();
 	}
 }
