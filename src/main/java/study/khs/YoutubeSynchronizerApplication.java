@@ -15,7 +15,7 @@ public class YoutubeSynchronizerApplication {
 	@Bean
 	public CharacterEncodingFilter characterEncodingFilter() {
 		CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
-		characterEncodingFilter.setEncoding("UTF-8");
+		characterEncodingFilter.setEncoding("EUC-KR");
 		characterEncodingFilter.setForceEncoding(true);
 		return characterEncodingFilter;
 	}
