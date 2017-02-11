@@ -17,7 +17,8 @@ spring:
       hibernate:
         globally_quoted_identifiers: true
         dialect: org.hibernate.dialect.MySQL5Dialect
-        
+   
+   
 ---
 spring:
   profiles: prod
