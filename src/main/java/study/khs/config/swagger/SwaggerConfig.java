@@ -37,6 +37,6 @@ public class SwaggerConfig {
 	}
 
 	private ApiInfo apiInfo() {
-		return new ApiInfoBuilder().title("API SPEC È®ÀÎ ÆäÀÌÁö").description("½ºÅÍµğ¸¦ À§ÇÑ Å×½ºÆ® API SPEC È®ÀÎ ÆäÀÌÁöÀÔ´Ï´Ù").build();
+		return new ApiInfoBuilder().title("API SPEC í•œê¸€").description("í•œê¸€ API SPEC í•œê¸€").build();
 	}
 }
