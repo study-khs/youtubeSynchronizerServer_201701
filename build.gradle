@@ -26,6 +26,7 @@ war {
 }
 
 sourceCompatibility = 1.8
+compileJava.options.encoding = 'UTF-8'
 
 repositories {
 	mavenCentral()
@@ -33,7 +34,6 @@ repositories {
 
 configurations {
 	providedRuntime
-	compileJava.options.encoding = 'UTF-8'
 }
 
 dependencies {
