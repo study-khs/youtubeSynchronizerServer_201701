@@ -15,6 +15,8 @@ buildscript {
 }
 
 apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
 apply plugin: 'eclipse-wtp'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'war'
@@ -25,11 +27,20 @@ war {
 	version = '0.0.1'
 }
 
+jar {
+    baseName = 'gs-accessing-data-jpa'
+    version =  '0.1.0'
+}
+
 sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()
+	maven { url "https://repository.jboss.org/nexus/content/repositories/releases" }
 }
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 configurations {
 	providedRuntime
@@ -48,4 +59,8 @@ dependencies {
 	providedCompile("org.projectlombok:lombok:1.12.2")
 	compile("org.springframework:spring-webmvc")
 	providedCompile("javax.servlet:javax.servlet-api:3.1.0")
+	compile("org.springframework.boot:spring-boot-starter-data-jpa")
+	compile "org.springframework.boot:spring-boot-starter-jdbc"
+    compile("com.h2database:h2")
+    testCompile("junit:junit")
 }
