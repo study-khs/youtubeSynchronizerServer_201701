@@ -24,4 +24,4 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/new_schema
     username: root
-    password: 04412345
+    password: admin
